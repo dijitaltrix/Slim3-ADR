@@ -6,15 +6,19 @@ It's DRY and has good separation of concerns.
 
 This is my first attempt at a Slim project so I'm still getting up to speed.
 
-With thanks to geggleto and all the guys who make Slim Framework happen.
+The main 'juice' of the code is in the lib folder, with sane basic Actions and Reponders.
+
+I'd imagine these would cover 80% of all CRUD requirements anything more advanced simply extend the Actions\WhateverAction. 
+
+With thanks to geggleto and silentworks for explaining a few things and all the guys who make Slim Framework happen.
 
 ### A couple of points:
-+ Use the Container foundHandler to inject the app instance into the Action (Todo)
-+ Using the Action constructor should probably be reworked
-+ It would be great to use the __invoke method on the Responders
++ Use the Container foundHandler to inject the app instance into the Action (Todo) (Bad idea)
++ Using the Action constructor should probably be reworked (Bad idea too)
++ It would be great to use the __invoke method on the Responders 
 
 
-### Required reading:
+### Recommended reading:
 
 The ADR pattern
 <https://github.com/pmjones/adr>

@@ -12,6 +12,10 @@ $container = new \Slim\Container;
 # http://www.slimframework.com/docs/objects/router.html#route-strategies
 
 /*
+
+Not a good idea to inject app, or Pimple, just the required
+dependencies of that particular action.
+
 $container['foundHandler'] = function($c) {
 	
 	# TODO create an AppRequestResponse class 
@@ -26,17 +30,8 @@ $container['foundHandler'] = function($c) {
 };
 */
 
-# it would also be great to trap the $app->responder call and load the 
-# necessary responder then
-/*
-$container['responder'] = function($c) {
-	# is it possible to get method call?
-	# then call \Responders\{method}Responder 
-	# or check responder{:method[a-z]+} ?
-	#
-};
-*/
-
+# apparently a Factory class is the way to go.. 
+# seems a bit 'Controller'ish to me
 $container['indexAction'] = function($c, $args) {
 	echo '<pre>';
 	print_r($args);
