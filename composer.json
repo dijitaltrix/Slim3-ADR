@@ -1,0 +1,20 @@
+{
+    "name": "dijitaltrix/slim3adrconcept",
+    "description": "ADR Concept using Slim Framework 3",
+    "license": "MIT",
+    "authors": [
+        {
+            "email": "ian@dijix.com",
+            "name": "Ian Grindley"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0@dev"
+    },
+    "autoload": {
+        "classmap": [
+            "lib/",
+			"app/src/"
+        ]
+    }
+}
